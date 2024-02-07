@@ -33,7 +33,7 @@ io.on('connection', (socket) => {
         socket.join(user.room)
 
         socket.emit('message', generateMessage('Admin', 'Welcome to our chat app!'))
-        socket.broadcast.to(room).emit('message', generateMessage('Admin', `${username} has joined!`))
+        socket.broadcast.to(user.room).emit('message', generateMessage('Admin', `${username} has joined!`))
 
         io.to(user.room).emit('roomData', {
             room: user.room,
