@@ -61,7 +61,7 @@ button:disabled {
 .centered-form {
     background: #333744;
     width: 100vw;
-    height: 100vh;   
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +115,7 @@ button:disabled {
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;
 }
 
 .message__name {
@@ -154,6 +154,21 @@ button:disabled {
     padding: 12px;
     margin: 0 16px 0 0;
     flex-grow: 1;
+    min-width: 110px;
+}
+
+@media (max-width: 768px) {
+    .compose {
+        display: flex;
+    }
+
+    .compose form {
+        flex: 6;
+    }
+
+    #location-btn {
+        width: 65px
+    }
 }
 
 .compose button {
@@ -166,7 +181,7 @@ button:disabled {
     font-weight: 400;
     font-size: 22px;
     background: #2c2f3a;
-    padding: 24px;   
+    padding: 24px;
 }
 
 .list-title {
